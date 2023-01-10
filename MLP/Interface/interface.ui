@@ -1,0 +1,605 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Interface</class>
+ <widget class="QMainWindow" name="Interface">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1103</width>
+    <height>840</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>700</width>
+    <height>600</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>MLP</string>
+  </property>
+  <widget class="QWidget" name="Mainwindow">
+   <widget class="QStackedWidget" name="stackedWidget">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>1000</width>
+      <height>600</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="page">
+     <widget class="QGraphicsView" name="paintWidget">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>512</width>
+        <height>512</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButtonClean">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>530</y>
+        <width>111</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Clean</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButtonClassificate">
+      <property name="geometry">
+       <rect>
+        <x>210</x>
+        <y>530</y>
+        <width>111</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Classificate</string>
+      </property>
+     </widget>
+     <widget class="QWidget" name="layoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>640</x>
+        <y>520</y>
+        <width>271</width>
+        <height>69</height>
+       </rect>
+      </property>
+      <layout class="QGridLayout" name="gridLayout">
+       <property name="sizeConstraint">
+        <enum>QLayout::SetFixedSize</enum>
+       </property>
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <item row="1" column="0">
+        <widget class="QRadioButton" name="radioButtonMatrix">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+           <horstretch>34</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="text">
+          <string>Matrix type</string>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QRadioButton" name="radioButtonGraph">
+         <property name="text">
+          <string>Graph type</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="0" colspan="2">
+        <widget class="QLabel" name="labelImplement">
+         <property name="font">
+          <font>
+           <pointsize>20</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>Implementation</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="verticalLayoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>610</x>
+        <y>20</y>
+        <width>371</width>
+        <height>501</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayoutAnswer">
+       <item>
+        <widget class="QLabel" name="labelAnswer">
+         <property name="font">
+          <font>
+           <pointsize>34</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>Answer</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="labelTextAnswer">
+         <property name="font">
+          <font>
+           <pointsize>250</pointsize>
+          </font>
+         </property>
+         <property name="locale">
+          <locale language="Russian" country="Russia"/>
+         </property>
+         <property name="text">
+          <string>A</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QPushButton" name="pushButtonGoToExperiment">
+      <property name="geometry">
+       <rect>
+        <x>530</x>
+        <y>10</y>
+        <width>121</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Start experiment</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButtonOpenBMP">
+      <property name="geometry">
+       <rect>
+        <x>390</x>
+        <y>530</y>
+        <width>131</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Open BMP FIle</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_aboutThisNet">
+      <property name="geometry">
+       <rect>
+        <x>530</x>
+        <y>40</y>
+        <width>121</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>About this net</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_2">
+     <widget class="QWidget" name="layoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>30</y>
+        <width>481</width>
+        <height>501</height>
+       </rect>
+      </property>
+      <layout class="QGridLayout" name="gridLayoutExperiment">
+       <item row="6" column="1">
+        <widget class="QLabel" name="labelSpentTime">
+         <property name="text">
+          <string>Spent time(sec):</string>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="2">
+        <widget class="QLabel" name="labelResultFMeasure">
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="2">
+        <widget class="QDoubleSpinBox" name="spinBoxTestSet">
+         <property name="maximum">
+          <double>1.000000000000000</double>
+         </property>
+         <property name="singleStep">
+          <double>0.050000000000000</double>
+         </property>
+         <property name="value">
+          <double>0.500000000000000</double>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="1">
+        <widget class="QLabel" name="labelPrecision">
+         <property name="text">
+          <string>Precision:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="2">
+        <widget class="QLabel" name="labelResultPrecision">
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1" colspan="2">
+        <widget class="QLabel" name="labelExperiment">
+         <property name="font">
+          <font>
+           <pointsize>20</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>Experiment</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="2">
+        <widget class="QLabel" name="labelResultAccuracy">
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="1">
+        <widget class="QLabel" name="labelRecall">
+         <property name="text">
+          <string>Recall:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QLabel" name="labelAccuracy">
+         <property name="text">
+          <string>Average accuracy:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="2">
+        <widget class="QLabel" name="labelResultRecall">
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="0">
+        <widget class="QPushButton" name="pushButtonBack">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="text">
+          <string>&lt;- back</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QLabel" name="labelTestSet">
+         <property name="text">
+          <string>Test set:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="1">
+        <widget class="QLabel" name="labelFMeasure">
+         <property name="text">
+          <string>F-measure:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="6" column="2">
+        <widget class="QLabel" name="labelResultSpentTime">
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="3">
+        <widget class="QPushButton" name="pushButtonExperimentOpenFile">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="text">
+          <string>Open file</string>
+         </property>
+        </widget>
+       </item>
+       <item row="7" column="1" colspan="2">
+        <widget class="QPushButton" name="pushButtonStartExperiment">
+         <property name="minimumSize">
+          <size>
+           <width>50</width>
+           <height>50</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>Start experiment</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QLabel" name="labelExperimentFilename">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>10</y>
+        <width>481</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_wait">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>540</y>
+        <width>481</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1103</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuNet">
+    <property name="title">
+     <string>Net</string>
+    </property>
+    <widget class="QMenu" name="menuRun_learning">
+     <property name="title">
+      <string>Run learning</string>
+     </property>
+     <addaction name="actionReal_time_training"/>
+     <addaction name="actionCross_validation"/>
+    </widget>
+    <addaction name="actionCreate_new"/>
+    <addaction name="separator"/>
+    <addaction name="actionOpen"/>
+    <addaction name="actionSave"/>
+    <addaction name="separator"/>
+    <addaction name="menuRun_learning"/>
+    <addaction name="separator"/>
+    <addaction name="actionAbout_this_net"/>
+   </widget>
+   <widget class="QMenu" name="menuExperiment">
+    <property name="title">
+     <string>Experiment</string>
+    </property>
+    <addaction name="actionGo_to_experiment"/>
+   </widget>
+   <addaction name="menuNet"/>
+   <addaction name="menuExperiment"/>
+  </widget>
+  <action name="actionGo_to_experiment">
+   <property name="text">
+    <string>Go to experiment</string>
+   </property>
+  </action>
+  <action name="actionOpen">
+   <property name="text">
+    <string>Open ...</string>
+   </property>
+  </action>
+  <action name="actionSave">
+   <property name="text">
+    <string>Save ...</string>
+   </property>
+  </action>
+  <action name="actionAbout_this_net">
+   <property name="text">
+    <string>About this net</string>
+   </property>
+  </action>
+  <action name="actionCreate_new">
+   <property name="text">
+    <string>Create new</string>
+   </property>
+  </action>
+  <action name="actionCross_validation">
+   <property name="text">
+    <string>Cross-validation</string>
+   </property>
+  </action>
+  <action name="actionReal_time_training">
+   <property name="text">
+    <string>Real-time training</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>actionGo_to_experiment</sender>
+   <signal>triggered()</signal>
+   <receiver>Interface</receiver>
+   <slot>goToExperimentWindow()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>551</x>
+     <y>419</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionOpen</sender>
+   <signal>triggered()</signal>
+   <receiver>Interface</receiver>
+   <slot>OpenWeight_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>551</x>
+     <y>419</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionSave</sender>
+   <signal>triggered()</signal>
+   <receiver>Interface</receiver>
+   <slot>SaveWeight_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>551</x>
+     <y>419</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionAbout_this_net</sender>
+   <signal>triggered()</signal>
+   <receiver>Interface</receiver>
+   <slot>showNetConfig_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>551</x>
+     <y>419</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionCreate_new</sender>
+   <signal>triggered()</signal>
+   <receiver>Interface</receiver>
+   <slot>createNet()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>551</x>
+     <y>419</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionReal_time_training</sender>
+   <signal>triggered()</signal>
+   <receiver>Interface</receiver>
+   <slot>startLearning()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>551</x>
+     <y>419</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionCross_validation</sender>
+   <signal>triggered()</signal>
+   <receiver>Interface</receiver>
+   <slot>goToCrossValidationWindow()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>551</x>
+     <y>419</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>goToExperimentWindow()</slot>
+  <slot>OpenWeight_clicked()</slot>
+  <slot>SaveWeight_clicked()</slot>
+  <slot>createNet()</slot>
+  <slot>showNetConfig_clicked()</slot>
+  <slot>startLearning()</slot>
+  <slot>goToCrossValidationWindow()</slot>
+ </slots>
+</ui>
